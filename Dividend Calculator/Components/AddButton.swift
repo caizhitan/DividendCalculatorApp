@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CustomButton: View {
+struct AddButton: View {
     var action: () -> Void
     
     var body: some View {
@@ -25,8 +25,8 @@ struct CustomButton: View {
     }
 }
 
-struct CustomButton_Previews: PreviewProvider {
+struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(action: {})
+        AddButton(action: {})
     }
 }

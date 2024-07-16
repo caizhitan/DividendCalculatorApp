@@ -1,18 +1,21 @@
-//
-//  YearlyIncome.swift
-//  Dividend Calculator
-//
-//  Created by Cai Zhi Tan on 16/7/24.
-//
-
 import SwiftUI
 
 struct YearlyIncome: View {
+    var yearlyIncome: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack (alignment: .leading){
+            Text("Yearly Income:")
+                .font(.system(size: 22, weight: .bold))
+            Text("$\(yearlyIncome.formattedWithoutCents())")
+                .font(.system(size: 20, weight: .medium))
+
+        }
     }
 }
 
-#Preview {
-    YearlyIncome()
+struct YearlyIncome_Previews: PreviewProvider {
+    static var previews: some View {
+        YearlyIncome(yearlyIncome: 1000.00)
+    }
 }

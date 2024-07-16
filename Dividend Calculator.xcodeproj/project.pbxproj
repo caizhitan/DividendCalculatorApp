@@ -11,8 +11,17 @@
 		07D9978B2C466C3D0043D534 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9978A2C466C3D0043D534 /* ContentView.swift */; };
 		07D9978D2C466C3E0043D534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D9978C2C466C3E0043D534 /* Assets.xcassets */; };
 		07D997902C466C3E0043D534 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D9978F2C466C3E0043D534 /* Preview Assets.xcassets */; };
-		07D997972C466F7D0043D534 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997962C466F7D0043D534 /* CustomButton.swift */; };
+		07D997972C466F7D0043D534 /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997962C466F7D0043D534 /* AddButton.swift */; };
 		07D9979C2C467DCB0043D534 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997982C466FD00043D534 /* CardView.swift */; };
+		07D9979F2C4684140043D534 /* MiniCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D9979E2C4684140043D534 /* MiniCardView.swift */; };
+		07D997A12C4699800043D534 /* InvestmentTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A02C4699800043D534 /* InvestmentTotal.swift */; };
+		07D997A32C4699980043D534 /* YearlyIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A22C4699980043D534 /* YearlyIncome.swift */; };
+		07D997A62C469C880043D534 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A52C469C880043D534 /* Double+Extensions.swift */; };
+		07D997A82C469E870043D534 /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A72C469E870043D534 /* EditCardView.swift */; };
+		07D997AA2C46B8460043D534 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A92C46B8460043D534 /* AddCardView.swift */; };
+		07D997AD2C46BC5F0043D534 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997AC2C46BC5F0043D534 /* Card.swift */; };
+		07D997AF2C46C1B90043D534 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 07D997AE2C46C1B90043D534 /* README.md */; };
+		07D997B12C46C4E40043D534 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997B02C46C4E40043D534 /* FileManagerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +30,17 @@
 		07D9978A2C466C3D0043D534 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07D9978C2C466C3E0043D534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07D9978F2C466C3E0043D534 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		07D997962C466F7D0043D534 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		07D997962C466F7D0043D534 /* AddButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		07D997982C466FD00043D534 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		07D9979E2C4684140043D534 /* MiniCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniCardView.swift; sourceTree = "<group>"; };
+		07D997A02C4699800043D534 /* InvestmentTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentTotal.swift; sourceTree = "<group>"; };
+		07D997A22C4699980043D534 /* YearlyIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyIncome.swift; sourceTree = "<group>"; };
+		07D997A52C469C880043D534 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		07D997A72C469E870043D534 /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
+		07D997A92C46B8460043D534 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		07D997AC2C46BC5F0043D534 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		07D997AE2C46C1B90043D534 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		07D997B02C46C4E40043D534 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +57,7 @@
 		07D9977C2C466C3D0043D534 = {
 			isa = PBXGroup;
 			children = (
+				07D997AE2C46C1B90043D534 /* README.md */,
 				07D997872C466C3D0043D534 /* Dividend Calculator */,
 				07D997862C466C3D0043D534 /* Products */,
 			);
@@ -56,6 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				07D997882C466C3D0043D534 /* Dividend_CalculatorApp.swift */,
+				07D997B22C46C5B50043D534 /* Utilities */,
+				07D997AB2C46BC4F0043D534 /* Models */,
+				07D997A42C469C000043D534 /* Extensions */,
 				07D9979B2C467AEB0043D534 /* Components */,
 				07D9978A2C466C3D0043D534 /* ContentView.swift */,
 				07D9979D2C467E3D0043D534 /* Views */,
@@ -77,7 +99,12 @@
 			isa = PBXGroup;
 			children = (
 				07D997982C466FD00043D534 /* CardView.swift */,
-				07D997962C466F7D0043D534 /* CustomButton.swift */,
+				07D997962C466F7D0043D534 /* AddButton.swift */,
+				07D9979E2C4684140043D534 /* MiniCardView.swift */,
+				07D997A02C4699800043D534 /* InvestmentTotal.swift */,
+				07D997A22C4699980043D534 /* YearlyIncome.swift */,
+				07D997A72C469E870043D534 /* EditCardView.swift */,
+				07D997A92C46B8460043D534 /* AddCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -87,6 +114,30 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		07D997A42C469C000043D534 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				07D997A52C469C880043D534 /* Double+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		07D997AB2C46BC4F0043D534 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07D997AC2C46BC5F0043D534 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07D997B22C46C5B50043D534 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				07D997B02C46C4E40043D534 /* FileManagerHelper.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D997AF2C46C1B90043D534 /* README.md in Resources */,
 				07D997902C466C3E0043D534 /* Preview Assets.xcassets in Resources */,
 				07D9978D2C466C3E0043D534 /* Assets.xcassets in Resources */,
 			);
@@ -159,10 +211,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07D997A62C469C880043D534 /* Double+Extensions.swift in Sources */,
 				07D9978B2C466C3D0043D534 /* ContentView.swift in Sources */,
 				07D997892C466C3D0043D534 /* Dividend_CalculatorApp.swift in Sources */,
+				07D997A82C469E870043D534 /* EditCardView.swift in Sources */,
+				07D997AA2C46B8460043D534 /* AddCardView.swift in Sources */,
+				07D997B12C46C4E40043D534 /* FileManagerHelper.swift in Sources */,
 				07D9979C2C467DCB0043D534 /* CardView.swift in Sources */,
-				07D997972C466F7D0043D534 /* CustomButton.swift in Sources */,
+				07D997972C466F7D0043D534 /* AddButton.swift in Sources */,
+				07D9979F2C4684140043D534 /* MiniCardView.swift in Sources */,
+				07D997A12C4699800043D534 /* InvestmentTotal.swift in Sources */,
+				07D997A32C4699980043D534 /* YearlyIncome.swift in Sources */,
+				07D997AD2C46BC5F0043D534 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dividend Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 4GFQ9Q659B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -324,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dividend Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = 4GFQ9Q659B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
