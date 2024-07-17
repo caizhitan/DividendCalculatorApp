@@ -58,6 +58,7 @@ struct CardView: View {
             .frame(maxWidth: .infinity, alignment: .topTrailing)
         }
         .frame(height: 150)
+        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 10)
         .onTapGesture {
             showEditCardView = true
         }

@@ -25,6 +25,7 @@ struct MiniCardView: View {
             .padding(8)
         }
         .frame(height: 80)
+        .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 10)
     }
 }
 

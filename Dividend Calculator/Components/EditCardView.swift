@@ -64,6 +64,8 @@ struct EditCardView: View {
                 presentationMode.wrappedValue.dismiss()
             }, trailing: Button("Save") {
                 presentationMode.wrappedValue.dismiss()
+                let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .medium)
+                impactFeedbackgenerator.impactOccurred()
             })
         }
     }
