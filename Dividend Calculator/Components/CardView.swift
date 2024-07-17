@@ -8,16 +8,19 @@ struct CardView: View {
     var onDelete: () -> Void
     
     @State private var showEditCardView = false
-
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        ZStack {
-            Color(red: 0.11, green: 0.12, blue: 0.13)
-                .cornerRadius(8)
+        let themeProvider = ThemeProvider(colorScheme: colorScheme)
+        
+        return ZStack {
+            themeProvider.backgroundColor
+                .cornerRadius(12)
             
             VStack(alignment: .leading) {
                 Text(tickerTitle)
                     .font(.system(size: 26, weight: .bold))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeProvider.textColor)
                     .padding(.top, 16)
                     .padding(.leading, 16)
                 
@@ -25,7 +28,7 @@ struct CardView: View {
                 
                 Text("$\(investmentAmt.formattedWithSeparator())")
                     .font(.system(size: 22, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeProvider.textColor)
                     .padding(.leading, 16)
                     .padding(.bottom, 16)
             }
@@ -33,20 +36,20 @@ struct CardView: View {
             
             VStack(alignment: .trailing, spacing: 4) {
                 Text("Avg Yield:")
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeProvider.textColor)
                 
                 Text(String(format: "%.2f%%", avgYield))
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeProvider.textColor)
                 
                 Text("Avg YTD Yield:")
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeProvider.textColor)
                 
                 Text(String(format: "%.2f%%", avgYtdYield))
-                    .font(.system(size: 14, weight: .regular))
-                    .foregroundColor(.white)
+                    .font(.system(size: 14, weight: .medium))
+                    .foregroundColor(themeProvider.textColor)
                 
                 Spacer()
             }
@@ -75,12 +78,24 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(
-            tickerTitle: .constant("YYY"),
-            investmentAmt: .constant(1000.00),
-            avgYield: .constant(3.65),
-            avgYtdYield: .constant(7.85),
-            onDelete: {}
-        )
+        Group {
+            CardView(
+                tickerTitle: .constant("YYY"),
+                investmentAmt: .constant(1000.00),
+                avgYield: .constant(3.65),
+                avgYtdYield: .constant(7.85),
+                onDelete: {}
+            )
+            .environment(\.colorScheme, .light)
+            
+            CardView(
+                tickerTitle: .constant("YYY"),
+                investmentAmt: .constant(1000.00),
+                avgYield: .constant(3.65),
+                avgYtdYield: .constant(7.85),
+                onDelete: {}
+            )
+            .environment(\.colorScheme, .dark)
+        }
     }
 }

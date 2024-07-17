@@ -4,19 +4,23 @@ struct MiniCardView: View {
     var title: String
     var value: Double
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
-        ZStack {
-            Color(red: 0.11, green: 0.12, blue: 0.13)
-                .cornerRadius(8)
+        let themeProvider = ThemeProvider(colorScheme: colorScheme)
+        
+        return ZStack {
+            themeProvider.backgroundColor
+                .cornerRadius(12)
             
             VStack(alignment: .center, spacing: 8) {
                 Text(title)
                     .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeProvider.textColor)
                 
                 Text(String(format: "%.2f%%", value))
                     .font(Font.custom("SF Pro", size: 18).weight(.medium))
-                    .foregroundColor(.white)
+                    .foregroundColor(themeProvider.textColor)
             }
             .padding(8)
         }
@@ -26,6 +30,12 @@ struct MiniCardView: View {
 
 struct MiniCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MiniCardView(title: "Avg Yield", value: 3.65)
+        Group {
+            MiniCardView(title: "Avg Yield", value: 3.65)
+                .environment(\.colorScheme, .light)
+            
+            MiniCardView(title: "Avg Yield", value: 3.65)
+                .environment(\.colorScheme, .dark)
+        }
     }
 }

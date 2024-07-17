@@ -9,6 +9,8 @@ struct EditCardView: View {
     @Binding var avgYtdYield: Double
     var onDelete: () -> Void
     
+    @FocusState private var tickerTitleFieldIsFocused: Bool
+    
     private var decimalFormatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -23,6 +25,9 @@ struct EditCardView: View {
             Form {
                 Section(header: Text("Edit Ticker Title")) {
                     TextField("Ticker Title", text: $tickerTitle)
+                        .autocapitalization(.allCharacters)
+                        .textContentType(.name)
+                        .focused($tickerTitleFieldIsFocused)
                 }
                 
                 Section(header: Text("Edit Investment Amount")) {

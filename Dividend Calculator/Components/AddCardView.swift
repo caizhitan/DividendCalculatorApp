@@ -1,5 +1,3 @@
-// Components/AddCardView.swift
-
 import SwiftUI
 
 struct AddCardView: View {
@@ -12,11 +10,19 @@ struct AddCardView: View {
     @State private var avgYield: String = ""
     @State private var avgYtdYield: String = ""
     
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
+    @FocusState private var tickerTitleFieldIsFocused: Bool
+
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Add Ticker Title")) {
                     TextField("Ticker Title", text: $tickerTitle)
+                        .autocapitalization(.allCharacters)
+                        .textContentType(.name)
+                        .focused($tickerTitleFieldIsFocused)
                 }
                 
                 Section(header: Text("Add Investment Amount")) {
@@ -38,16 +44,32 @@ struct AddCardView: View {
             .navigationBarItems(leading: Button("Cancel") {
                 presentationMode.wrappedValue.dismiss()
             }, trailing: Button("Save") {
+                guard let investmentAmtValue = Double(investmentAmt),
+                      let avgYieldValue = Double(avgYield),
+                      let avgYtdYieldValue = Double(avgYtdYield) else {
+                    alertMessage = "Please enter valid numbers for Investment Amount, Average Yield, and Average YTD Yield."
+                    showAlert = true
+                    return
+                }
+
                 let newCard = Card(
                     id: UUID(),
                     tickerTitle: tickerTitle,
-                    investmentAmt: Double(investmentAmt) ?? 0.00,
-                    avgYield: Double(avgYield) ?? 0.00,
-                    avgYtdYield: Double(avgYtdYield) ?? 0.00
+                    investmentAmt: investmentAmtValue,
+                    avgYield: avgYieldValue,
+                    avgYtdYield: avgYtdYieldValue
                 )
                 cards.insert(newCard, at: 0) // Insert new card at the top
                 presentationMode.wrappedValue.dismiss()
             })
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Invalid Input"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.tickerTitleFieldIsFocused = true
+                }
+            }
         }
     }
 }

@@ -26,9 +26,8 @@ struct ContentView: View {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     Text("Overall")
-                        .font(.system(size: 30, weight: .bold))
-                    Divider()
-                        .background(Color.white)
+                        .font(.system(size: 32, weight: .bold))
+                        .padding([.bottom])
                     
                     InvestmentTotal(totalInvestment: totalInvestment)
                     
