@@ -4,11 +4,11 @@ struct YearlyIncome: View {
     var yearlyIncome: Double
     
     var body: some View {
-        VStack (alignment: .leading){
+        VStack(alignment: .leading){
             Text("Yearly Income:")
-                .font(.system(size: 22, weight: .bold))
+                .font(.system(size: 24, weight: .bold))
             Text("$\(yearlyIncome.formattedWithoutCents())")
-                .font(.system(size: 20, weight: .medium))
+                .font(.system(size: 24, weight: .medium))
 
         }
     }
