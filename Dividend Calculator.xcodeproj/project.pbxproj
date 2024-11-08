@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,8 +17,6 @@
 		07D997A12C4699800043D534 /* InvestmentTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A02C4699800043D534 /* InvestmentTotal.swift */; };
 		07D997A32C4699980043D534 /* YearlyIncome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A22C4699980043D534 /* YearlyIncome.swift */; };
 		07D997A62C469C880043D534 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A52C469C880043D534 /* Double+Extensions.swift */; };
-		07D997A82C469E870043D534 /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A72C469E870043D534 /* EditCardView.swift */; };
-		07D997AA2C46B8460043D534 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997A92C46B8460043D534 /* AddCardView.swift */; };
 		07D997AD2C46BC5F0043D534 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997AC2C46BC5F0043D534 /* Card.swift */; };
 		07D997AF2C46C1B90043D534 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 07D997AE2C46C1B90043D534 /* README.md */; };
 		07D997B12C46C4E40043D534 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D997B02C46C4E40043D534 /* FileManagerHelper.swift */; };
@@ -37,13 +35,15 @@
 		07D997A02C4699800043D534 /* InvestmentTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentTotal.swift; sourceTree = "<group>"; };
 		07D997A22C4699980043D534 /* YearlyIncome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyIncome.swift; sourceTree = "<group>"; };
 		07D997A52C469C880043D534 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
-		07D997A72C469E870043D534 /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
-		07D997A92C46B8460043D534 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 		07D997AC2C46BC5F0043D534 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		07D997AE2C46C1B90043D534 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		07D997B02C46C4E40043D534 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
 		07D997B52C4766A30043D534 /* ThemeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		07706B1F2CDDB4C100AE171E /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		07D997822C466C3D0043D534 /* Frameworks */ = {
@@ -80,9 +80,9 @@
 				07D997B22C46C5B50043D534 /* Utilities */,
 				07D997AB2C46BC4F0043D534 /* Models */,
 				07D997A42C469C000043D534 /* Extensions */,
+				07706B1F2CDDB4C100AE171E /* Views */,
 				07D9979B2C467AEB0043D534 /* Components */,
 				07D9978A2C466C3D0043D534 /* ContentView.swift */,
-				07D9979D2C467E3D0043D534 /* Views */,
 				07D9978C2C466C3E0043D534 /* Assets.xcassets */,
 				07D9978E2C466C3E0043D534 /* Preview Content */,
 			);
@@ -105,17 +105,8 @@
 				07D9979E2C4684140043D534 /* MiniCardView.swift */,
 				07D997A02C4699800043D534 /* InvestmentTotal.swift */,
 				07D997A22C4699980043D534 /* YearlyIncome.swift */,
-				07D997A72C469E870043D534 /* EditCardView.swift */,
-				07D997A92C46B8460043D534 /* AddCardView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		07D9979D2C467E3D0043D534 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		07D997A42C469C000043D534 /* Extensions */ = {
@@ -157,6 +148,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				07706B1F2CDDB4C100AE171E /* Views */,
 			);
 			name = "Dividend Calculator";
 			productName = "Dividend Calculator";
@@ -217,8 +211,6 @@
 				07D997A62C469C880043D534 /* Double+Extensions.swift in Sources */,
 				07D9978B2C466C3D0043D534 /* ContentView.swift in Sources */,
 				07D997892C466C3D0043D534 /* Dividend_CalculatorApp.swift in Sources */,
-				07D997A82C469E870043D534 /* EditCardView.swift in Sources */,
-				07D997AA2C46B8460043D534 /* AddCardView.swift in Sources */,
 				07D997B12C46C4E40043D534 /* FileManagerHelper.swift in Sources */,
 				07D9979C2C467DCB0043D534 /* CardView.swift in Sources */,
 				07D997972C466F7D0043D534 /* AddButton.swift in Sources */,
